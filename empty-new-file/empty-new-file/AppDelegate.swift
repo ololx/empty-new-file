@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  quick-blank-file
+//  empty-new-file
 //
-//  Created by Alexander A. Kropotin on 31/10/2021.
+//  Created by Alexander A. Kropotin on 03/11/2021.
 //  Copyright © 2021 Alexander A. Kropotin. All rights reserved.
 //
 
