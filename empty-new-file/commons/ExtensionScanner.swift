@@ -70,8 +70,12 @@ public class AppExtentionsScanner: ExtentionsScanner {
                             for extensionName in exportedTypeDeclaration.typeConformsTo! {
                                 extentions.append(extensionName.lowercased())
                                 if (exportedTypeDeclaration.iconConformsTo != nil) {
-                                    print(app.appendingPathComponent("Contents").appendingPathComponent("Resources").appendingPathComponent("\(exportedTypeDeclaration.iconConformsTo!).icns"))
-                                    icns.updateValue(app.appendingPathComponent("Contents").appendingPathComponent("Resources").appendingPathComponent("\(exportedTypeDeclaration.iconConformsTo!).icns").absoluteString, forKey: extensionName.lowercased())
+                                    var iconName = exportedTypeDeclaration.iconConformsTo!;
+                                    if (!iconName.contains(".icns")) {
+                                        iconName.append(".icns");
+                                    }
+                                    print(iconName)
+                                    icns.updateValue(app.appendingPathComponent("Contents").appendingPathComponent("Resources").appendingPathComponent(iconName).absoluteString, forKey: extensionName.lowercased())
                                 }
                             }
                         }
