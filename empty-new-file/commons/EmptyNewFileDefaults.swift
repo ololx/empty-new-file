@@ -36,7 +36,8 @@ public extension EmptyNewFileDefaults {
 
 public enum EmptyNewFileExtension {
     
-    static var extensions: [String] {
+    static var extensions: [String: String] {
+        
         get {
             return extensionsDefaults.get();
             
@@ -47,5 +48,19 @@ public enum EmptyNewFileExtension {
         }
     }
     
-    private static var extensionsDefaults = EmptyNewFileDefaults(key: "extensions", defaultValue: ["js", "css", "html", "md"]);
+    static var incs: [String: String] {
+        
+        get {
+            return icnsDefaults.get();
+            
+        }
+        set {
+            icnsDefaults.set(newValue);
+            
+        }
+    }
+    
+    private static var extensionsDefaults = EmptyNewFileDefaults(key: "extensions", defaultValue: ["js": "js", "css": "css", "html": "html", "md": "md"]);
+    
+    private static var icnsDefaults = EmptyNewFileDefaults(key: "icns", defaultValue: ["":""]);
 }

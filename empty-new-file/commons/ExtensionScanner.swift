@@ -25,9 +25,11 @@ public extension Sequence where Element: Hashable {
 
 public struct UTTypeConformsTo: Codable {
     var typeConformsTo: [String]?
+    var iconConformsTo: String?
     
     private enum CodingKeys : String, CodingKey {
         case typeConformsTo = "CFBundleTypeExtensions"
+        case iconConformsTo = "CFBundleTypeIconFile"
     }
 }
 
@@ -49,6 +51,7 @@ public class AppExtentionsScanner: ExtentionsScanner {
     public func scan() -> [String]! {
         let applicationsDirectory = FileManager.default.urls(for: .applicationDirectory, in: .localDomainMask)[0];
         var extentions: [String] = [];
+        var icns: [String: String] = [:];
         
         do {
             let apps = try FileManager.default.contentsOfDirectory(at: applicationsDirectory, includingPropertiesForKeys: nil);
@@ -66,6 +69,14 @@ public class AppExtentionsScanner: ExtentionsScanner {
                             
                             for extensionName in exportedTypeDeclaration.typeConformsTo! {
                                 extentions.append(extensionName.lowercased())
+                                if (exportedTypeDeclaration.iconConformsTo != nil) {
+                                    var iconName = exportedTypeDeclaration.iconConformsTo!;
+                                    if (!iconName.contains(".icns")) {
+                                        iconName.append(".icns");
+                                    }
+                                    print(iconName)
+                                    icns.updateValue(app.appendingPathComponent("Contents").appendingPathComponent("Resources").appendingPathComponent(iconName).absoluteString, forKey: extensionName.lowercased())
+                                }
                             }
                         }
                     }
@@ -77,6 +88,8 @@ public class AppExtentionsScanner: ExtentionsScanner {
         } catch let error as NSError {
             NSLog("ExtensionScanner.scan() failed to scan apps: %@", error.description as NSString);
         }
+        
+        EmptyNewFileExtension.incs = icns;
         
         return extentions;
     }

@@ -41,11 +41,11 @@ class ViewController: NSViewController {
     }
 
     @IBAction func saveExtensions(_ sender: Any) {
-        var extensions: [String] = [];
+        var extensions: [String: String] = [:];
         
         for checkbutton in self.extensionsCheckboxes {
             if (checkbutton.state == .on) {
-                extensions.append(checkbutton.title);
+                extensions.updateValue(checkbutton.title, forKey: checkbutton.title);
             }
         }
         
