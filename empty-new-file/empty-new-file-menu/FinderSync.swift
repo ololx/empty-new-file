@@ -48,34 +48,38 @@ class FinderSync: FIFinderSync {
     
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
         // Produce a menu for the extension (to be shown when right clicking a folder in Finder)
-        let quickSymlinkMenu = NSMenu(title: "");
+        let emptyBlankFileMenu = NSMenu(title: "");
+        emptyBlankFileMenu.setAccessibilityIndex(0)
         
-        var exts = EmptyNewFileExtension.extensions;
+        let exts = EmptyNewFileExtension.extensions;
+        let icns = EmptyNewFileExtension.incs;
         for ext in exts {
-            print(ext)
+            let item = NSMenuItem.init();
+            item.title = "\(ext.value)";
+            item.action = #selector(createSymlink(_:));
+            item.target = self
             
-            quickSymlinkMenu.addItem(
-                withTitle: "\(ext)",
-                action: #selector(createSymlink(_:)),
-                keyEquivalent: ""
-            );
+            if (icns["\(ext.key)"] != nil) {
+                item.image = NSImage.init(byReferencing: URL.init(string: icns[ext.key]!)!)
+            }
+            
+            emptyBlankFileMenu.addItem(item);
         }
         
         
         
-        let quickSymLinkMainMenu = NSMenu(title: "");
-        let quickSymlinkMenuItem = NSMenuItem(
+        let emptyBlankFileMainMenu = NSMenu(title: "");
+        let emptyBlankFileMenuItem = NSMenuItem(
             title:  "New file",
             action: nil,
             keyEquivalent: ""
         );
-        quickSymLinkMainMenu.setSubmenu(quickSymlinkMenu, for: quickSymlinkMenuItem);
-        quickSymLinkMainMenu.addItem(quickSymlinkMenuItem);
-        return quickSymLinkMainMenu;
+        emptyBlankFileMainMenu.setSubmenu(emptyBlankFileMenu, for: emptyBlankFileMenuItem);
+        emptyBlankFileMainMenu.addItem(emptyBlankFileMenuItem);
+        return emptyBlankFileMainMenu;
     }
     
     @IBAction func createSymlink(_ sender: NSMenuItem!) {
-        print("123")
         guard let target = FIFinderSyncController.default().targetedURL() else {
             
             NSLog("Failed to obtain targeted URL: %@")
@@ -101,6 +105,17 @@ class FinderSync: FIFinderSync {
             
             NSLog("Failed to create file: %@", error.description as NSString)
         }
+    }
+    
+    private func loadImage(filePath: String) -> NSImage? {
+        let fileURL = URL.init(string: filePath);
+        do {
+            let imageData = try Data(contentsOf: fileURL!)
+            return NSImage(data: imageData)
+        } catch {
+            print("Error loading image : \(error)")
+        }
+        return nil
     }
 }
 
