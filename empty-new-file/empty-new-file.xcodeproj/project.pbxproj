@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A37363472753EE92007E7867 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A373634A2753EE92007E7867 /* Localizable.strings */; };
+		A37363482753EE92007E7867 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A373634A2753EE92007E7867 /* Localizable.strings */; };
 		A3E5F32B2732D710002686A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E5F32A2732D710002686A9 /* AppDelegate.swift */; };
 		A3E5F32D2732D710002686A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E5F32C2732D710002686A9 /* ViewController.swift */; };
 		A3E5F32F2732D710002686A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3E5F32E2732D710002686A9 /* Assets.xcassets */; };
@@ -44,6 +46,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A37363422753EE2C007E7867 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		A37363432753EE40007E7867 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		A37363492753EE92007E7867 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A373634B2753EE94007E7867 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A373634C2753EE95007E7867 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A373634D2753F009007E7867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A3E5F3272732D710002686A9 /* empty-new-file.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "empty-new-file.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E5F32A2732D710002686A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3E5F32C2732D710002686A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +88,7 @@
 		A3E5F31E2732D710002686A9 = {
 			isa = PBXGroup;
 			children = (
+				A373634A2753EE92007E7867 /* Localizable.strings */,
 				A3E5F33A2732D750002686A9 /* commons */,
 				A3E5F3292732D710002686A9 /* empty-new-file */,
 				A3FAD3682732F3470025311C /* empty-new-file-menu */,
@@ -194,6 +203,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				de,
 			);
 			mainGroup = A3E5F31E2732D710002686A9;
 			productRefGroup = A3E5F3282732D710002686A9 /* Products */;
@@ -212,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3E5F32F2732D710002686A9 /* Assets.xcassets in Resources */,
+				A37363472753EE92007E7867 /* Localizable.strings in Resources */,
 				A3E5F3322732D710002686A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A37363482753EE92007E7867 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,10 +271,23 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A373634A2753EE92007E7867 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A37363492753EE92007E7867 /* en */,
+				A373634B2753EE94007E7867 /* ru */,
+				A373634C2753EE95007E7867 /* de */,
+				A373634D2753F009007E7867 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		A3E5F3302732D710002686A9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A3E5F3312732D710002686A9 /* Base */,
+				A37363422753EE2C007E7867 /* ru */,
+				A37363432753EE40007E7867 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -273,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -317,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -330,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -368,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

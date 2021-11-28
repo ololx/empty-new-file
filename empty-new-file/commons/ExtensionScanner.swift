@@ -68,15 +68,22 @@ public class AppExtentionsScanner: ExtentionsScanner {
                             }
                             
                             for extensionName in exportedTypeDeclaration.typeConformsTo! {
-                                extentions.append(extensionName.lowercased())
-                                if (exportedTypeDeclaration.iconConformsTo != nil) {
-                                    var iconName = exportedTypeDeclaration.iconConformsTo!;
-                                    if (!iconName.contains(".icns")) {
-                                        iconName.append(".icns");
-                                    }
-                                    print(iconName)
-                                    icns.updateValue(app.appendingPathComponent("Contents").appendingPathComponent("Resources").appendingPathComponent(iconName).absoluteString, forKey: extensionName.lowercased())
+                                if (exportedTypeDeclaration.iconConformsTo == nil) {
+                                    continue;
                                 }
+                                
+                                var iconName = exportedTypeDeclaration.iconConformsTo!;
+                                if (!iconName.contains(".icns")) {
+                                    iconName.append(".icns");
+                                }
+                                
+                                let filename = app.appendingPathComponent("Contents").appendingPathComponent("Resources").appendingPathComponent(iconName);
+                                if(!FileManager.default.fileExists(atPath: filename.path)) {
+                                    continue;
+                                }
+                                
+                                icns.updateValue(filename.absoluteString, forKey: extensionName.lowercased());
+                                extentions.append(extensionName.lowercased());
                             }
                         }
                     }
