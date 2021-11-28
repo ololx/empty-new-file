@@ -49,7 +49,7 @@ class FinderSync: FIFinderSync {
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
         // Produce a menu for the extension (to be shown when right clicking a folder in Finder)
         let emptyBlankFileMenu = NSMenu(title: "");
-        emptyBlankFileMenu.setAccessibilityIndex(0)
+        emptyBlankFileMenu.setAccessibilityIndex(0);
         
         let exts = EmptyNewFileExtension.extensions;
         let icns = EmptyNewFileExtension.incs;
@@ -70,7 +70,7 @@ class FinderSync: FIFinderSync {
         
         let emptyBlankFileMainMenu = NSMenu(title: "");
         let emptyBlankFileMenuItem = NSMenuItem(
-            title:  "New file",
+            title:  NSLocalizedString("NEW_FILE_ACTION_NAME", comment: ""),
             action: nil,
             keyEquivalent: ""
         );
@@ -88,8 +88,8 @@ class FinderSync: FIFinderSync {
         }
         
         var originalPath = target
-        let originalFilename = "New file"
-        var filename = "New file.\(sender.title)"
+        let originalFilename = NSLocalizedString("NEW_FILE_ACTION_NAME", comment: "")
+        var filename = "\(originalFilename).\(sender.title)"
         let fileType = ".\(sender.title)"
         var counter = 1
         

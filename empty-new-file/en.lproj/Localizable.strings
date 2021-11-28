@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  empty-new-file
+
+  Created by Alexander A. Kropotin on 28.11.21.
+  Copyright © 2021 Alexander A. Kropotin. All rights reserved.
+*/
+
+/* Class = "NSMenuItem"; */
+"NEW_FILE_ACTION_NAME" = "New file";

@@ -10,10 +10,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Refactor application.
 
-## [0.0.2-alpha] - 2021-11-14
+## [0.0.1-alpha.1] - 2021-11-28
+
+### Changed
+
+- The iclon path scanning.
 
 ### Added
 
+- The localization for `Russina`, `German` and `English`.
 - The scanning icons for menu items from the app `Info.plist`.
 
 ## [0.0.1-alpha] - 2021-11-03
