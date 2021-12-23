@@ -5,6 +5,7 @@ The Quick Symlink is a `Finder extension`  which provides a `contextual menu ite
 [![status](https://img.shields.io/badge/status-active-active?style=flat-square)](BADGES_GUIDE.md#status) [![version](https://img.shields.io/badge/version-0.0.1--alpha.1-informational?style=flat-square)](BADGES_GUIDE.md#version) [![oss lifecycle](https://img.shields.io/badge/oss_lifecycle-active-important?style=flat-square)](BADGES_GUIDE.md#oss-lifecycle) [![maintenance](https://img.shields.io/badge/maintenance-yes-informational?style=flat-square)](BADGES_GUIDE.md#maintenance) [![last release](https://img.shields.io/badge/last_release-November_28,_2021-informational?style=flat-square)](BADGES_GUIDE.md#release-date) [![last commit](https://img.shields.io/badge/last_commit-November_28,_2021-informational?style=flat-square)](BADGES_GUIDE.md#commit-date)
 
 [![license](https://img.shields.io/badge/license-MIT-informational?style=flat-square)](LICENSE) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?style=flat-square)](CODE_OF_CONDUCT.md)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fololx%2Fempty-new-file.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fololx%2Fempty-new-file?ref=badge_shield)
 
 [![platform](https://img.shields.io/badge/platform-OS_X_10.10+-important?style=flat-square)](https://en.wikipedia.org/wiki/Computing_platform)
 
@@ -147,3 +148,6 @@ For the versioning is used [Semantic Versioning](http://semver.org/). For the ve
 ## 🔏 Licensing
 
 This project is licensed under the MIT license - see the [lisence](LICENSE) document for details.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fololx%2Fempty-new-file.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fololx%2Fempty-new-file?ref=badge_large)
