@@ -1,15 +1,23 @@
+<div align="right">
+  <img src="https://img.shields.io/github/downloads/ololx/empty-new-file/total?style=social" alt="downloads"/>
+  <a href="https://github.com/ololx/birthday-cake/discussions" target="_blank">
+		<img src="https://img.shields.io/github/discussions/ololx/empty-new-file?label=welcome%20to%20discussions&logo=github&style=social" alt="discutions"/>
+	</a>
+</div>
+
 # empty-new-file
 
 The Empty New File is a Finder Extension  which allows to create an empty new file via contextual menu on macOS. 
 
-[![status](https://img.shields.io/badge/status-active-active?style=flat-square)](BADGES_GUIDE.md#status) [![version](https://img.shields.io/badge/version-0.0.1--alpha.1-informational?style=flat-square)](BADGES_GUIDE.md#version) [![oss lifecycle](https://img.shields.io/badge/oss_lifecycle-active-important?style=flat-square)](BADGES_GUIDE.md#oss-lifecycle) [![maintenance](https://img.shields.io/badge/maintenance-yes-informational?style=flat-square)](BADGES_GUIDE.md#maintenance) [![last release](https://img.shields.io/badge/last_release-November_28,_2021-informational?style=flat-square)](BADGES_GUIDE.md#release-date) [![last commit](https://img.shields.io/badge/last_commit-November_28,_2021-informational?style=flat-square)](BADGES_GUIDE.md#commit-date)
+[![tag](https://img.shields.io/github/v/tag/ololx/empty-new-file?style=flat&include_prereleases&logo=github)](https://github.com/ololx/empty-new-file/tags) [![release](https://img.shields.io/github/v/release/ololx/empty-new-file?style=flat&include_prereleases&logo=github)](https://github.com/ololx/empty-new-file/releases)
 
-[![license](https://img.shields.io/badge/license-MIT-informational?style=flat-square)](LICENSE) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?style=flat-square)](CODE_OF_CONDUCT.md)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fololx%2Fempty-new-file.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fololx%2Fempty-new-file?ref=badge_shield)
+[![osslifecycle](https://img.shields.io/osslifecycle/ololx/empty-new-file?style=flat)](OSSMETADATA) [![last_commit](https://img.shields.io/github/last-commit/ololx/empty-new-file?style=flat&logo=github)](https://github.com/ololx/empty-new-file/commits) [![release_date](https://img.shields.io/github/release-date/ololx/empty-new-file?style=flat&logo=github)](https://github.com/ololx/empty-new-file/releases)
 
-[![platform](https://img.shields.io/badge/platform-OS_X_10.10+-important?style=flat-square)](https://en.wikipedia.org/wiki/Computing_platform)
+[![licence](https://img.shields.io/github/license/ololx/empty-new-file?style=flat)](LICENCE) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?style=flat)](CODE_OF_CONDUCT.md) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fololx%2Fempty-new-file.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fololx%2Fempty-new-file?ref=badge_shield)
 
----
+![repo_size](https://img.shields.io/github/repo-size/ololx/empty-new-file?style=flat&logo=github) ![languages_code_size](https://img.shields.io/github/languages/code-size/ololx/empty-new-file?style=flat&logo=github) ![languages_count](https://img.shields.io/github/languages/count/ololx/empty-new-file?style=flat&logo=github) ![languages_top](https://img.shields.io/github/languages/top/ololx/empty-new-file?style=flat&logo=github)
+
+![platform](https://img.shields.io/badge/platform-OS_X_10.10+-important?style=flat)
 
 ## 📇 Table of Contents
 
