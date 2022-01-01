@@ -1,11 +1,11 @@
 <div align="right">
   <img src="https://img.shields.io/github/downloads/ololx/empty-new-file/total?style=social" alt="downloads"/>
-  <a href="https://github.com/ololx/birthday-cake/discussions" target="_blank">
+  <a href="https://github.com/ololx/empty-new-file/discussions" target="_blank">
 		<img src="https://img.shields.io/github/discussions/ololx/empty-new-file?label=welcome%20to%20discussions&logo=github&style=social" alt="discutions"/>
 	</a>
 </div>
 
-# empty-new-file
+# Empty New File
 
 The Empty New File is a Finder Extension  which allows to create an empty new file via contextual menu on macOS. 
 
